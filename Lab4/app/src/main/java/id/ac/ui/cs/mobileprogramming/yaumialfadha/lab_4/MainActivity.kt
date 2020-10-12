@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity(), Communicator {
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentA).commit()
 
     }
+    override fun onBackPressed() {
+        val fragmentA = FragmentA()
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentA).commit()
+    }
 
     override fun passDataCom(editTextInput: String) {
         val bundle = Bundle()
